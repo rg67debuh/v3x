@@ -1016,7 +1016,6 @@ Animate.swimidle.SwimIdle.AnimationId = "http://www.roblox.com/asset/?id=0"
 Animate.swim.Swim.AnimationId = "http://www.roblox.com/asset/?id=0"
 game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
-
 A_Anthro.Name = "A_Anthro"
 A_Anthro.Parent = OtherTab
 A_Anthro.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
@@ -1037,7 +1036,6 @@ Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=251019277
 Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=2510195892"
 game.Players.LocalPlayer.Character.Humanoid.Jump = true
 end)
-
 wait(1)
 Main:TweenPosition(UDim2.new(0.421999991, 0, 0.28400004, 0))
 end)
@@ -1047,13 +1045,10 @@ end)
 section4:addButton("Infinite Yield (some cmd can ban)", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
-
---page 2
 local section1 = page2:addSection("Location Teleport")
 local section2 = page2:addSection("Guns Location")
 local section3 = page2:addSection("Melee Location")
 local section4 = page2:addSection("Others Location")
-
 section1:addButton("Admin Base", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-785.889587, -39.8012085, -887.36969)
 end)
@@ -1132,7 +1127,6 @@ end)
 section1:addButton("Uphill", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(158.058838, 87.4980011, -528.990479)
 end)
-
 section2:addButton("Pew Pew Shop 1", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-582.535461, 8.31278515, -735.345947)
 end)
@@ -1160,7 +1154,6 @@ end)
 section2:addButton("Taser", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-270.33078, 21.7979622, -101.764557)
 end)
-
 section3:addButton("Bat", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-82.7874298, 21.7480049, -296.294312)
 end)
@@ -1179,22 +1172,18 @@ end)
 section3:addButton("StopSign", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-226.137192, 21.7480049, -76.5735092)
 end)
-
 section4:addButton("Medium Armor", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(546.677368, 50.3108597, -631.054932)
 end)
 section4:addButton("Foods", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-786.617249, -39.6511955, -933.897217)
 end)
-
 local section1 = page3:addSection("Colors")
-
 for page3, color in pairs(themes) do -- all in one theme changer, i know, im cool
 section1:addColorPicker(page3, color, function(color3)
 venyx:setTheme(page3, color3)
 end)
 end
-
 section1:addButton("Destroy Gui", function()
 venyx:toggle()
 end)
