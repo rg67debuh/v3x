@@ -283,6 +283,7 @@ privateProperties = {
 	Font = Enum.Font.SourceSansBold;
 	TextSize = 18;
 }
+
 --////////////////////////////////////////////////////////////////
 local StarterGui = game:GetService("StarterGui")
 local Players = game:GetService("Players")
@@ -334,6 +335,7 @@ local chatFrame = player.PlayerGui.Chat.Frame
 chatFrame.ChatChannelParentFrame.Visible = true
 chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
 end)
+
 section3:addSlider("Reach Bag Size", 50, 50, 200, function(value)
 game.Players.LocalPlayer.Backpack["[BrownBag]"].Handle.Size = Vector3.new(value, value, value)
 end)
