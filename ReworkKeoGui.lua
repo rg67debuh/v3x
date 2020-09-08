@@ -140,6 +140,23 @@ section1:addKeybind("Toggle Keybind Speed and HJ", Enum.KeyCode.One, function()
 local SuperSpeed = Instance.new("IntValue",lp.Character.BodyEffects.Movement);SuperSpeed.Name = "SuperSpeed"
 local HulkJump = Instance.new("IntValue",lp.Character.BodyEffects.Movement);HulkJump.Name = "HulkJump"
 end)
+section1:addButton("Toggle Noclip [N]", function()
+noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "n" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+end)	
 section1:addButton("Toggle Teleport [V]", function()
                 plr = game.Players.LocalPlayer
  
@@ -255,6 +272,7 @@ end
 end
 coroutine.wrap(TKDWQ_fake_script)()
 end)
+	
 section2:addSlider("FOV Changer", 70, 0, 140, function(arg)
 game.Workspace.Camera.FieldOfView = (arg)
 end)
