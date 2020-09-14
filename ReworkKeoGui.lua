@@ -20,12 +20,14 @@ local page2 = venyx:addPage("Teleports", 5012544693)
 local page3 = venyx:addPage("Buy Items", 5012544693)
 local page4 = venyx:addPage("Buy Ammo", 5012544693)
 local page5 = venyx:addPage("Da Hood Gui", 5012544693)
-local page6 = venyx:addPage("Option Gui", 5012544693)
+local page6 = venyx:addPage("Goto Player", 5012544693)
+local page7 = venyx:addPage("Option Gui", 5012544693)
 
 local section1 = page:addSection("Movements")
 local section2 = page:addSection("Player")
 local section3 = page:addSection("Player Reach")
 local section4 = page:addSection("Vision")
+local section5 = page:addSection("Remove")
 
 section1:addSlider("Toggle Key Speed Fly [X]", 0, 0, 100, function(value)
     local plr = game.Players.LocalPlayer
@@ -283,7 +285,7 @@ end)
 section2:addButton("No Lose Guns", function()
 pcall(function() if tostring(game.PlaceId) == "2788229376" then local corepackages = game:GetService"CorePackages" local localplayer = game:GetService"Players".LocalPlayer local run = game:GetService"RunService" run:BindToRenderStep("rrrrrrrrrrr",2000,function() pcall(function() if localplayer.Character.Humanoid.Health <= 30 then localplayer.Character.Humanoid:UnequipTools() localplayer.Character.Humanoid:Destroy() workspace.CurrentCamera.CameraSubject = localplayer.Character wait() local prt = Instance.new("Model", corepackages); Instance.new("Part", prt).Name="Torso"; Instance.new("Part", prt).Name="Head"; Instance.new("Humanoid", prt).Name="Humanoid"; localplayer.Character=prt end end) pcall(function() if localplayer.Character.Humanoid.FloorMaterial == "Plastic" then ReplicatedStorage:FireServer("Stomp") end end) end) loadstring(game:HttpGet("https://pastebin.com/raw/MQ3wc7Zq", true))() end end)
 end)
-section2:addButton("UnJail (125$)", function()
+section2:addButton("UnJail($125)", function()
 local plr = game:GetService('Players').LocalPlayer
         if plr.DataFolder.Currency.Value >= 125 then
 			local savedkeypos = plr.Character.HumanoidRootPart.Position
@@ -1799,14 +1801,20 @@ section1:addButton("Infinite Yield (some cmd can ban)", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-local section1 = page6:addSection("Colors")
-for page6, color in pairs(themes) do -- all in one theme changer, i know, im cool
-section1:addColorPicker(page6, color, function(color3)
-venyx:setTheme(page6, color3)
+
+local section1 = page7:addSection("Option")
+for page, color in pairs(themes) do -- all in one theme changer, i know, im cool
+section1:addColorPicker(page, color, function(color3)
+venyx:setTheme(page7, color3)
 end)
 end
 section1:addButton("Destroy Gui", function()
 venyx:toggle()
 end)
+
+local section1 = page6:addSection("Goto Player(Upcoming...)")
+local section2 = page6:addSection("Loop Goto Player(Upcoming...)")
+local section3 = page6:addSection("Annoy Player(Upcoming...)")
+
 
 venyx:SelectPage(venyx.pages[1], true)
