@@ -283,6 +283,37 @@ end)
 section2:addButton("No Lose Guns", function()
 pcall(function() if tostring(game.PlaceId) == "2788229376" then local corepackages = game:GetService"CorePackages" local localplayer = game:GetService"Players".LocalPlayer local run = game:GetService"RunService" run:BindToRenderStep("rrrrrrrrrrr",2000,function() pcall(function() if localplayer.Character.Humanoid.Health <= 30 then localplayer.Character.Humanoid:UnequipTools() localplayer.Character.Humanoid:Destroy() workspace.CurrentCamera.CameraSubject = localplayer.Character wait() local prt = Instance.new("Model", corepackages); Instance.new("Part", prt).Name="Torso"; Instance.new("Part", prt).Name="Head"; Instance.new("Humanoid", prt).Name="Humanoid"; localplayer.Character=prt end end) pcall(function() if localplayer.Character.Humanoid.FloorMaterial == "Plastic" then ReplicatedStorage:FireServer("Stomp") end end) end) loadstring(game:HttpGet("https://pastebin.com/raw/MQ3wc7Zq", true))() end end)
 end)
+section2:addButton("UnJail (125$)", function()
+local plr = game:GetService('Players').LocalPlayer
+        if plr.DataFolder.Currency.Value >= 125 then
+			local savedkeypos = plr.Character.HumanoidRootPart.Position
+            plr.Character.HumanoidRootPart.CFrame = CFrame.new(-270.94, 20.327, -242.38)--Key
+			plr.Character.HumanoidRootPart.CFrame = CFrame.new(-270.94, 20.327, -242.38)--Key(Backup)
+			wait()
+			fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Key] - $125"].ClickDetector)
+			wait(.1)
+			fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Key] - $125"].ClickDetector)
+			fireclickdetector(game:GetService("Workspace").Ignored.Shop["[Key] - $125"].ClickDetector)
+			repeat wait() until plr.Backpack:FindFirstChild('[Key]')
+			local Hum = plr.Character:FindFirstChildOfClass('Humanoid')
+			if Hum.Health > 0 then
+				key1 = plr.Backpack:FindFirstChild('[Key]')
+				if key1 then
+					Hum:EquipTool(key1)
+					for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do
+						if v:isA("Tool") then
+								plr.Character.Humanoid:EquipTool(key1)
+								 plr.Character.HumanoidRootPart.CFrame = CFrame.new(savedkeypos)--Bank
+								v:Activate()
+			elseif plr.DataFolder.Currency.Value < 125 then
+				print('Not Enough Cash (Requied 125$)')	
+				wait(1)
+						end
+					end
+				end
+			end
+		end
+end)
 section2:addButton("Chat Troll", function()
 local Action = game.Players:GetPlayers()
   for i = 1,#Action do
