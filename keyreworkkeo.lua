@@ -1,99 +1,126 @@
--- Instances:
+
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
+local Login = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local Account = Instance.new("ImageLabel")
+local UserInput = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local KeyInput = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local User = Instance.new("ImageLabel")
+local Key = Instance.new("ImageLabel")
 local Panel = Instance.new("TextLabel")
-local CheckSystem = Instance.new("TextButton")
-local Input = Instance.new("TextBox")
-local CoolThing = Instance.new("TextLabel")
+local LoginIn = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
 
 --Properties:
 
 ScreenGui.Parent = game.CoreGui
 
 Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-Frame.BorderColor3 = Color3.fromRGB(66, 115, 252)
-Frame.Position = UDim2.new(0.425537646, 0, 0.418326676, 0)
-Frame.Size = UDim2.new(0, 203, 0, 82)
+Frame.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Frame.Position = UDim2.new(0.303267986, 0, 0.342629492, 0)
+Frame.Size = UDim2.new(0, 300, 0, 165)
+Frame.Active = true
+Frame.Draggable = true
+
+Login.Name = "Login"
+Login.Parent = Frame
+Login.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Login.BackgroundTransparency = 1.000
+Login.Position = UDim2.new(0.578896105, 0, 0.0519929826, 0)
+Login.Size = UDim2.new(0, 113, 0, 35)
+Login.Image = "rbxassetid://5698186712"
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = Frame
+
+Account.Name = "Account"
+Account.Parent = Frame
+Account.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Account.BackgroundTransparency = 1.000
+Account.Position = UDim2.new(0.03065194, 0, 0.0519929826, 0)
+Account.Size = UDim2.new(0, 158, 0, 35)
+Account.Image = "rbxassetid://5698190152"
+
+UserInput.Name = "UserInput"
+UserInput.Parent = Frame
+UserInput.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UserInput.Position = UDim2.new(0.343333334, 0, 0.375757575, 0)
+UserInput.Size = UDim2.new(0, 163, 0, 12)
+UserInput.Font = Enum.Font.SourceSans
+UserInput.Text = ""
+UserInput.TextColor3 = Color3.fromRGB(0, 0, 0)
+UserInput.TextSize = 14.000
+
+UICorner_2.Parent = UserInput
+
+KeyInput.Name = "KeyInput"
+KeyInput.Parent = Frame
+KeyInput.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyInput.Position = UDim2.new(0.343333334, 0, 0.557575762, 0)
+KeyInput.Size = UDim2.new(0, 163, 0, 12)
+KeyInput.Font = Enum.Font.SourceSans
+KeyInput.Text = ""
+KeyInput.TextColor3 = Color3.fromRGB(0, 0, 0)
+KeyInput.TextSize = 14.000
+
+UICorner_3.Parent = KeyInput
+
+User.Name = "User"
+User.Parent = Frame
+User.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+User.BackgroundTransparency = 1.000
+User.Position = UDim2.new(0.0839852914, 0, 0.333333343, 0)
+User.Size = UDim2.new(0, 61, 0, 26)
+User.Image = "rbxassetid://5698269066"
+
+Key.Name = "Key"
+Key.Parent = Frame
+Key.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Key.BackgroundTransparency = 1.000
+Key.Position = UDim2.new(0.0933333337, 0, 0.4969697, 0)
+Key.Size = UDim2.new(0, 55, 0, 31)
+Key.Image = "rbxassetid://5698268099"
 
 Panel.Name = "Panel"
 Panel.Parent = Frame
-Panel.BackgroundColor3 = Color3.fromRGB(94, 134, 247)
-Panel.BorderColor3 = Color3.fromRGB(65, 65, 65)
-Panel.Position = UDim2.new(0.00500007207, 0, 0, 1)
-Panel.Size = UDim2.new(0, 201, 0, 14)
+Panel.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+Panel.BorderColor3 = Color3.fromRGB(70, 70, 70)
+Panel.Position = UDim2.new(0, 0, 0.280000001, 0)
+Panel.Size = UDim2.new(0, 300, 0, 0)
 Panel.Font = Enum.Font.SourceSans
-Panel.Text = "Nigga Whitelist"
+Panel.Text = ""
 Panel.TextColor3 = Color3.fromRGB(0, 0, 0)
 Panel.TextSize = 14.000
 
-CheckSystem.Name = "CheckSystem"
-CheckSystem.Parent = Frame
-CheckSystem.BackgroundColor3 = Color3.fromRGB(94, 134, 247)
-CheckSystem.BorderColor3 = Color3.fromRGB(88, 137, 172)
-CheckSystem.Position = UDim2.new(0.812807739, 0, 0.520406187, 0)
-CheckSystem.Size = UDim2.new(0, 19, 0, 13)
-CheckSystem.Font = Enum.Font.SourceSans
-CheckSystem.Text = "✓"
-CheckSystem.TextColor3 = Color3.fromRGB(50, 50, 50)
-CheckSystem.TextSize = 14.000
+LoginIn.Name = "Login In"
+LoginIn.Parent = Frame
+LoginIn.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+LoginIn.Position = UDim2.new(0.166666672, 0, 0.73939395, 0)
+LoginIn.Size = UDim2.new(0, 200, 0, 27)
+LoginIn.Font = Enum.Font.SourceSans
+LoginIn.Text = "Login In"
+LoginIn.TextColor3 = Color3.fromRGB(0, 0, 0)
+LoginIn.TextSize = 14.000
+LoginIn.MouseButton1Down:connect(function()
+	if UserInput.text == "Nipuna0712" and KeyInput.text == "AdminAdmin123456789" or UserInput.text == "KeoLeNoir" and KeyInput.text == "NibbaDuCiel" or UserInput.text == "thewhen" and KeyInput.text == "epicbromomento" or UserInput.text == "Theo" and KeyInput.text == "TheoLeRigolo" or UserInput.text == "taRz53" and KeyInput.text == "ragelenica" or UserInput.text == "BrangHD" and KeyInput.text == "NicaTeam" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/rg67debuh/v3x/master/reworkkeogui%20new%20loadstring", true))()
+end
+	
+end)
 
-Input.Name = "Input"
-Input.Parent = Frame
-Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Input.BorderColor3 = Color3.fromRGB(255, 255, 255)
-Input.Position = UDim2.new(0.0706827715, 0, 0.520406187, 0)
-Input.Size = UDim2.new(0, 140, 0, 13)
-Input.Font = Enum.Font.SourceSans
-Input.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-Input.PlaceholderText = "ez"
-Input.Text = ""
-Input.TextColor3 = Color3.fromRGB(0, 0, 0)
-Input.TextSize = 14.000
-
-CoolThing.Name = "CoolThing"
-CoolThing.Parent = Frame
-CoolThing.BackgroundColor3 = Color3.fromRGB(94, 134, 247)
-CoolThing.BorderColor3 = Color3.fromRGB(27, 42, 53)
-CoolThing.Position = UDim2.new(0.068965517, 0, 0.6789428, 0)
-CoolThing.Size = UDim2.new(0, 0, 0, 2)
-CoolThing.Font = Enum.Font.SourceSans
-CoolThing.Text = ""
-CoolThing.TextColor3 = Color3.fromRGB(0, 0, 0)
-CoolThing.TextSize = 14.000
+UICorner_4.CornerRadius = UDim.new(0, 20)
+UICorner_4.Parent = LoginIn
 
 -- Scripts:
 
-local function LLMGLI_fake_script() -- ScreenGui.LocalScript 
-	local script = Instance.new('LocalScript', ScreenGui)
+local function ITWNGME_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
 
-	local Frame = script.Parent.Frame
-	local CheckSystem = script.Parent.Frame.CheckSystem
-	local CoolThing = script.Parent.Frame.CoolThing
-	local Input =  script.parent.Frame.Input
-	CoolThing.Visible = false
+	print("Hello world!")
 	
-	Frame.MouseEnter:Connect(function()
-		CoolThing.Visible = true
-		CoolThing:TweenSize(UDim2.new(0, 140,0, 2))
-		
-	end)
-	
-	Frame.MouseLeave:Connect(function()
-		CoolThing:TweenSize(UDim2.new(0, 0,0, 2))
-		wait(1)
-		CoolThing.Visible = false 	
-	end)
-	
-	CheckSystem.MouseButton1Down:Connect(function()
-		if Input.Text == "NicaTeam" then
-			Frame:TweenPosition(UDim2.new(0.367, 0.367, 0, 1080))
-			wait(2)
-			Frame.Visible = false
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/rg67debuh/v3x/master/reworkkeogui%20new%20loadstring", true))()	
-		end
-		
-	end)
 end
-coroutine.wrap(LLMGLI_fake_script)()
+coroutine.wrap(ITWNGME_fake_script)()
