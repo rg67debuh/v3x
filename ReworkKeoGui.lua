@@ -1,3 +1,17 @@
+		game.StarterGui:SetCore("SendNotification", {
+	                Title = "Black List Protocole Loading";
+	                Text = "...";
+	                 Duration = 2;
+		                  })
+                          
+                 
+                    wait(4)
+                    game.StarterGui:SetCore("SendNotification", {
+	                Title = "Protocole has loaded";
+	                Text = "You are not black listed, Enjoy exploit";
+	                 Duration = 2;
+		                  }) 
+wait(3)
 	game.StarterGui:SetCore("SendNotification", {
 		Title = "Keo Rework Gui Loaded";
 		Text = "nica :)";
@@ -1818,3 +1832,4 @@ local section3 = page6:addSection("Annoy Player(Upcoming...)")
 
 
 venyx:SelectPage(venyx.pages[1], true)
+
