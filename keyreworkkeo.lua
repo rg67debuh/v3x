@@ -108,8 +108,8 @@ LoginIn.TextSize = 14.000
 LoginIn.MouseButton1Down:connect(function()
 	if UserInput.text == "Nipuna0712" and KeyInput.text == "AdminAdmin123456789" or UserInput.text == "KeoLeNoir" and KeyInput.text == "NibbaDuCiel" or UserInput.text == "thewhen" and KeyInput.text == "epicbromomento" or UserInput.text == "Theo" and KeyInput.text == "TheoLeRigolo" or UserInput.text == "taRz53" and KeyInput.text == "ragelenica" or UserInput.text == "BrangHD" and KeyInput.text == "NicaTeam" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/rg67debuh/v3x/master/reworkkeogui%20new%20loadstring", true))()
-end
-	
+Frame:Destroy()
+end	
 end)
 
 UICorner_4.CornerRadius = UDim.new(0, 20)
