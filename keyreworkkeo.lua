@@ -1,5 +1,3 @@
-
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Login = Instance.new("ImageLabel")
@@ -14,6 +12,7 @@ local Key = Instance.new("ImageLabel")
 local Panel = Instance.new("TextLabel")
 local LoginIn = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
+local Logo = Instance.new("ImageLabel")
 
 --Properties:
 
@@ -106,21 +105,19 @@ LoginIn.Text = "Login In"
 LoginIn.TextColor3 = Color3.fromRGB(0, 0, 0)
 LoginIn.TextSize = 14.000
 LoginIn.MouseButton1Down:connect(function()
-	if UserInput.text == "Nipuna0712" and KeyInput.text == "AdminAdmin123456789" or UserInput.text == "KeoLeNoir" and KeyInput.text == "NibbaDuCiel" or UserInput.text == "thewhen" and KeyInput.text == "epicbromomento" or UserInput.text == "Theo" and KeyInput.text == "TheoLeRigolo" or UserInput.text == "BadAdmin" and KeyInput.text == "BadAdmin" or UserInput.text == "BrangHD" and KeyInput.text == "NicaTeam" then
+if UserInput.text == "Nipuna0712" and KeyInput.text == "AdminAdmin123456789" or UserInput.text == "KeoLeNoir" and KeyInput.text == "NibbaDuCiel" or UserInput.text == "thewhen" and KeyInput.text == "epicbromomento" or UserInput.text == "Theo" and KeyInput.text == "TheoLeRigolo" or UserInput.text == "BadAdmin" and KeyInput.text == "BadAdmin" or UserInput.text == "BrangHD" and KeyInput.text == "NicaTeam" then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/rg67debuh/v3x/master/reworkkeogui%20new%20loadstring", true))()
-Frame:Destroy()
+	Frame:Destroy()
 end	
 end)
 
 UICorner_4.CornerRadius = UDim.new(0, 20)
 UICorner_4.Parent = LoginIn
 
--- Scripts:
-
-local function ITWNGME_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	print("Hello world!")
-	
-end
-coroutine.wrap(ITWNGME_fake_script)()
+Logo.Name = "Logo"
+Logo.Parent = Frame
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BackgroundTransparency = 1.000
+Logo.Position = UDim2.new(0.856666744, 0, 0.739394128, 0)
+Logo.Size = UDim2.new(0, 29, 0, 26)
+Logo.Image = "rbxgameasset://Images/LogoMakr_4pTTJU_auto_x2"
