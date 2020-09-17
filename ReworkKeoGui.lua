@@ -13,8 +13,8 @@
 		                  }) 
 wait(3)
 	game.StarterGui:SetCore("SendNotification", {
-		Title = "Keo Rework Gui Loaded";
-		Text = "nica :)";
+		Title = "Keo's Rework Keo [Beta]";
+		Text = "Welcome";
 		Duration = 10;
 	})
 local library = loadstring(game:HttpGet("https://pastebin.com/raw/qwdPKKDN"))()
